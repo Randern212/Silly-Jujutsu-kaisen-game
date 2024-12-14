@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Sprites/MahoragaWheel.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Sprite
+
+class_name Mahoraga
+signal adapted
+
+func dmgtaken():
+		rotation_degrees+=10
+
+func _on_adaptationTimer_timeout():
+	rotation_degrees+=5
+
+func _process(delta):
+	if rotation_degrees>=180:
+		emit_signal(\"adapted\")
+"
+
+[node name="Mahoraga" type="Sprite"]
+texture = ExtResource( 1 )
+script = SubResource( 1 )
+
+[node name="adaptationTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="adaptationTimer" to="." method="_on_adaptationTimer_timeout"]
