@@ -12,3 +12,5 @@ using purple on the other hand will make you go bar negative so don't spam it
 CREDITS: 
 https://www.deviantart.com/robertokohama/art/destroyed-city-1-57289779 : City background from a manga named "Justice Blades"
 all the other assets are taken straight from the manga, Drawn by me or open source assets
+
+Download Link: https://randern212.itch.io/go-jo
